@@ -11,7 +11,7 @@
    <main>
     <div>
         <p>Add interesting animals to the list below!</p>
-        <a href="/animal/new">Add New Animal</a>
+        <a href="/animal/new"><input type="submit" value="ADD NEW ANIMAL"/></a>
         <div class="row">
             <div class="column">
                 <img src="https://static01.nyt.com/images/2017/03/07/science/07sci-boobies-social/07sci-boobies-social-superJumbo.jpg" alt="Blue-Footed Booby" style="width:100%; height:300px">
@@ -23,12 +23,13 @@
                 <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcShhts0nixkYnI_vuaYNJU4oPotomjmfB95rxi_U2f0J-vrU4EKCdZTyomCwGLVEhRYXcCJQ7w2iaLj7GI" alt="California Sea Lion" style="width:100%; height:300px">
             </div>
         </div>
+        <h4>List of Animals:</h4>
         <% for (animal of animals) { %>
             <articles>
                 <a href="/animal/<%=animal._id%>">
-                <h2>
+                <p>
                     <%= animal.name %>
-                </h2></a>
+                </p></a>
             </articles>
         <% } %>
     </div>

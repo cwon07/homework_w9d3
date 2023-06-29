@@ -16,11 +16,11 @@
         <li>Location: <%=animal.location%></li>
         <li>Life Expectancy in Years: <%=animal.lifeExpectancy%></li>
     </ul>
-    <a href="/animal/<%=id%>/edit">Edit this Animal</a>
+    <a href="/animal/<%=id%>/edit">
+    <input type="submit" value="EDIT"/></a>
     <form action="/animal/<%=id%>/?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE"/>
-    </form>
-    <a href="/animal">Back to Animals Index</a>
-    
+        <input type="submit" value="DELETE"/><br>  
+    <a href="/animal"><input type="submit" value="RETURN TO MAIN"/></a>
+</form>
 </body>
 </html>
