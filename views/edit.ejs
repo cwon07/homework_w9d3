@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals ABC</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>  
+    <h2>Edit <%=animal.name%></h2>
+    <form method="POST" action="/animal/<%=id%>?_method=PUT">
+        <label>Species: <input type="text" name="species" value="<%=animal.species%>"/></label>
+        <br>
+        <label>Extinct: Check if yes <input type="checkbox" name="extinct" <%=animal.extinct ? "checked" : "" %>/></label>
+        <br>
+        <label>Location: <input type="text" name="location" value="<%=animal.location%>"/></label>
+        <br>
+        <label>Life Expectancy in Years: <input type="number" name="lifeExpectancy" value="<%=animal.lifeExpectancy%>"/></label>
+        <input type="submit" name="Edit" value="EDIT">
+    </form>
+</body>
+</html>

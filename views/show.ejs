@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+    <%- include('../partials/head.ejs') %>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animals ABC</title>
 </head>
 <body>
+    <%- include('../partials/header.ejs') %>
     <h1><%=animal.name%></h1>
     <ul>
         <li><img src="<%animal.img%>"></li>
@@ -14,12 +16,8 @@
         <li>Location: <%=animal.location%></li>
         <li>Life Expectancy in Years: <%=animal.lifeExpectancy%></li>
     </ul>
-    
-
-    
-    
-    <a href="/animal/<%=_id_%>/edit">Edit this Animal</a>
-    <form action="/animal/<%=_id_%>/?_method=DELETE" method="POST">
+    <a href="/animal/<%=id%>/edit">Edit this Animal</a>
+    <form action="/animal/<%=id%>/?_method=DELETE" method="POST">
         <input type="submit" value="DELETE"/>
     </form>
     <a href="/animal">Back to Animals Index</a>
